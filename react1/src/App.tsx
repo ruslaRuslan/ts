@@ -9,7 +9,9 @@ interface User {
 
 function App() {
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users/");
+    axios.get("https://jsonplaceholder.typicode.com/users/").then(({data: User[]})=>{
+
+    });
   }, []);
   return (
     <Button
