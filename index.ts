@@ -48,36 +48,47 @@
 
 // -------------------------------------------------------------------------------------------------------------------------------------
 
-// 0 islemir
-// 1 isleyir
-// 2 cixib
+// // 0 islemir
+// // 1 isleyir
+// // 2 cixib
 
-// DNS ->
-enum workStatusEnum {
-    Islemir = 0,
-    Isleyir = 1,
-    Cixib = 2
+// // DNS ->
+// enum workStatusEnum {
+//     Islemir = 0,
+//     Isleyir = 1,
+//     Cixib = 2
+// }
+
+// interface CompanyWorker {
+//     ad: string;
+//     workStatus: workStatusEnum;
+// }
+// const ali: CompanyWorker = {
+//     ad: 'ali',
+//     workStatus: workStatusEnum.Isleyir
+// }
+// enum Controllers {
+//     UP = 39,
+//     RIGHT = 40,
+//     DOWN = 38,
+//     LEFT = 37
+// }
+
+
+// enum Actions {
+//     "GET_USERS",
+//     "ADD_USER"
+// }
+// // dispatch({type:Actions.GET_USERS})
+
+// -------------------------------------------------------------------------------------------------------------------------------------
+
+// generics
+function getFirstItem<T>(arr: T[]): T {
+    return arr[0]
 }
 
-interface CompanyWorker {
-    ad: string;
-    workStatus: workStatusEnum;
-}
-const ali: CompanyWorker = {
-    ad: 'ali',
-    workStatus: workStatusEnum.Isleyir
-}
-enum Controllers {
-    UP = 39,
-    RIGHT = 40,
-    DOWN = 38,
-    LEFT = 37
-}
+getFirstItem<number>([21, 23, 34])
+getFirstItem<string>(['ali', 'ahmad', 'elgun'])
+getFirstItem<boolean | string>([true, false, false, 'ali'])
 
-
-
-enum Actions {
-    "GET_USERS",
-    "ADD_USER"
-}
-// dispatch({type:Actions.GET_USERS})
