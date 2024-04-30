@@ -9,9 +9,14 @@ interface User {
 
 function App() {
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users/").then(({data: User[]})=>{
-
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/")
+      .then(({ data }: { data: User[] }) => {
+        data.forEach((element) => {
+          console.log(element.username);
+          
+        });
+      });
   }, []);
   return (
     <Button
