@@ -1,2 +1,3 @@
-let ad = 'Salam';
-console.log(ad.toUpperCase());
+// // implicit let a = 'text'
+// // explicit
+var sinif = 'ali';
